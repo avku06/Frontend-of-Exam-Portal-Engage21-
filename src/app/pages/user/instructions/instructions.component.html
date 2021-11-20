@@ -35,13 +35,15 @@
             <h1>Important Instructions</h1>
 
             <ul>
-              <li>This quiz is only for practice purpose.</li>
 
+              <li>
+                <b>Maximum Marks :
+                  {{ quiz.maxMarks }} </b>
+              </li>
               <li>
                 You have to submit quiz with in
                 <b> {{ quiz.maxDuration }} Minutes.</b>
               </li>
-              <li>You can attempt the quiz any number of time .</li>
               <li>
                 There are <b>{{ quiz.numberOfQuestions }} questions</b> in this
                 quiz.
@@ -66,8 +68,7 @@
               <li>Scroll down to move to next question.</li>
               <li>Click on Submit Quiz button on completion of the quiz.</li>
               <li>
-                Report of the test is automatically generated in the form of PDF
-                copy
+                Report of the test can be generated in the form of PDF copy after completion of quiz.
               </li>
             </ul>
           </mat-card-content>
