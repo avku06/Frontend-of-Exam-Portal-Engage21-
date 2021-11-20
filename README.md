@@ -10,7 +10,7 @@ Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pea
 
 ---
 
-# Frontend of Exam Portal
+# Local Setup of Project
 
 1. Create a New Folder and clone both Frontend and Backend Repositories inside that folder.
 
@@ -31,7 +31,7 @@ Frontend angular application started at `http://localhost:4200/`
 
 Backend Springboot application started at `http://localhost:8080/`
 
-####Navigate to `http://localhost:4200/`. <br>
+###Navigate to `http://localhost:4200/`. <br>
 
 ---
 
