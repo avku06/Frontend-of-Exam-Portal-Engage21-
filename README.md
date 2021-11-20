@@ -1,27 +1,44 @@
+# Microsoft Engage 2021 Project : Online Exam Portal 
+
+### Frontend with Angular 
+Github Repository for Online Exam Portal [ Frontend Code ](https://github.com/pearlgupta2000/Frontend-of-Exam-Portal-Engage21-) 
+
+### Backend with Springboot
+Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pearlgupta2000/Backend-of-Exam-Portal-Engage21--)
+
+### MySQL Database Used
+
+---
+
 # Frontend of Exam Portal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+1. Create a New Folder and clone both Frontend and Backend Repositories inside that folder.
 
-## Development server
+2. Open cmd, go inside the frontend folder and execute following commands : <br>
+  a). `npm install -g @angular/cli` (node.js should be installed before executing commands) <br>
+  b). `npm install --scripts-prepend-node-path=auto` <br>
+  c). `ng serve` <br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Frontend angular application started at `http://localhost:4200/`
 
-## Code scaffolding
+3. Open MySQL Workbench and create a new database by executing `create database database_name`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. Open the backend folder and change database connection details in `/src/main/resources/application.properties` file.
+  <br>
+  a). spring.datasource.url = jdbc:mysql://localhost:3306/`your database name`?serverTimezone=UTC <br>
+  b). spring.datasource.username = `root` <br>
+  c). spring.datasource.password = `password` <br>
 
-## Build
+Backend Springboot application started at `http://localhost:8080/`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+####Navigate to `http://localhost:4200/`. <br>
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Donot change any frontend file by mistake because the app will automatically reload if you change any of the source files.<br>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Angular CLI: 13.0.3<br>
+Node: 16.13.0<br>
+Package Manager: npm 8.1.0<br>
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
