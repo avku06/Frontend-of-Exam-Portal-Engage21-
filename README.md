@@ -23,8 +23,7 @@ Frontend angular application started at `http://localhost:4200/`
 
 3. Open MySQL Workbench and create a new database by executing `create database database_name`.
 
-4. Open the backend folder and change database connection details in `/src/main/resources/application.properties` file.
-  <br>
+4. Open the backend folder and change database connection details in `/src/main/resources/application.properties` file. <br>
   a). spring.datasource.url = jdbc:mysql://localhost:3306/`your database name`?serverTimezone=UTC <br>
   b). spring.datasource.username = `root` <br>
   c). spring.datasource.password = `password` <br>
