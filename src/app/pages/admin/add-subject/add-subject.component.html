@@ -1,0 +1,49 @@
+<mat-card>
+  <h1>Add Subject</h1>
+
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="row mt20">
+          <div class="col-md-6 offset-md-3">
+
+<!--            {{subject | json}}-->
+            <form (ngSubmit)="AddSubject()">
+
+              <p>
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Subject Name</mat-label>
+                  <input
+                    required
+                    [(ngModel)]="subject.name"
+                    name="name"
+                    matInput placeholder="Enter Here">
+                </mat-form-field>
+              </p>
+
+              <p>
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>Subject Description</mat-label>
+                  <textarea
+                    [(ngModel)]="subject.description"
+                    name="description"
+                    rows="8"
+                    matInput placeholder="Enter Here">
+                  </textarea>
+                </mat-form-field>
+              </p>
+
+              <div class="container text-center">
+                <button mat-raised-button color="primary" type="submit">ADD</button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </mat-card-content>
+</mat-card>

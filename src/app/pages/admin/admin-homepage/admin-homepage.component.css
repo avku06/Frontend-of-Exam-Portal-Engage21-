@@ -1,0 +1,8 @@
+.full-width{
+  width: 100%;
+}
+
+.wrap-btn{
+  white-space:normal !important;
+  word-wrap:break-word;
+}

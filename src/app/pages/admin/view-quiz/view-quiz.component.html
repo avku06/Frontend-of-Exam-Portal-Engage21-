@@ -1,0 +1,75 @@
+<mat-card class="mt20 mr20 ml20">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Filter Subject Wise</mat-label>
+    <mat-select>
+      <mat-option (click)="filter_quiz(0)">All</mat-option>
+      <mat-option *ngFor="let sub of subjects" [value]="sub.cid" (click)="filter_quiz(sub.cid)">
+        {{sub.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>
+
+<!--<h1 class="mt20">All Quizzes</h1>-->
+<mat-card class="mt20 mr20 ml20" *ngFor="let q of quiz_data">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{ q.title }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ q.subject.name }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ q.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      class="mt8 mb8 ml20"
+      [routerLink]="'/admin-dashboard/view-quiz-questions/' + q.qId + '/' + q.title"
+      mat-flat-button
+      color="primary">
+      Questions
+    </button>
+    <button mat-stroked-button color="primary" class="mt8 mb8 ml20">
+      Max Marks: {{ q.maxMarks }}
+    </button>
+    <button mat-stroked-button color="primary" class="ml20 mt8 mb8">
+      Questions: {{ q.numberOfQuestions }}
+    </button>
+
+    <button mat-stroked-button color="primary" class="ml20 mt8 mb8">
+      Duration: {{ q.maxDuration }}
+    </button>
+
+    <button
+      class="ml20 mt8 mb8"
+      [routerLink]="'/admin-dashboard/update-quiz/' + q.qId"
+      mat-flat-button
+      color="primary"
+      class="ml20">
+      Update
+    </button>
+
+    <button
+      [routerLink]="'/admin-dashboard/attempts/quiz/' + q.qId "
+      class="ml20 mt8 mb8"
+      mat-flat-button color="primary" class="ml20">Attempts</button>
+
+    <button
+      class="ml20 mt8 mb8"
+      mat-flat-button
+      (click)="deleteQuiz(q.qId)"
+      color="warn"
+      class="ml20">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<div class="container text-center mt20 mb20">
+  <button routerLink="/admin-dashboard/add-quiz" mat-raised-button color="primary">
+    Add New Quiz
+  </button>
+</div>

@@ -1,0 +1,43 @@
+<mat-card class="mt20 mr20 ml20 mb20" *ngIf="quiz && attempts">
+  <mat-card-title>{{quiz.title}} ({{attempts.length}})</mat-card-title>
+  <mat-card-subtitle>{{quiz.subject.name}}</mat-card-subtitle>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-4">
+        <button mat-stroked-button color="warn" class="mt8">
+        Maximum Marks : {{quiz.maxMarks}}
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button mat-stroked-button color="warn" class="mt8">
+        Total Questions : {{quiz.numberOfQuestions}}
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="mt20 mr20 ml20 mb20" *ngIf="attempts && attempts.length == 0">
+  <mat-card-title>No Attempts Yet</mat-card-title>
+</mat-card>
+
+<mat-card class="mt20 mr20 ml20" *ngFor="let attempt of attempts">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+      {{attempt.user.firstName}} {{attempt.user.lastName}}   ({{ attempt.user.username }})
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ attempt.createDateTime }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-4"><b>Marks Obtained : {{attempt.marksGot}}</b></div>
+      <div class="col-md-4">Correct Answers : {{attempt.correct_ques}}</div>
+      <div class="col-md-4">Attempted Questions : {{attempt.attempted_ques}}</div>
+    </div>
+  </mat-card-content>
+
+</mat-card>
