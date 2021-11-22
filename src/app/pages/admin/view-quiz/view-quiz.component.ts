@@ -19,10 +19,8 @@ export class ViewQuizComponent implements OnInit {
       (data: any) => {
         this.quizzes = data;
         this.quiz_data=data;
-        // console.log(this.quizzes);
       },
       (error) => {
-        console.log(error);
         Swal.fire('Error !', 'Error in loading data !', 'error');
       }
     );
@@ -42,7 +40,6 @@ export class ViewQuizComponent implements OnInit {
     if(id == 0){
       this.quiz_data=this.quizzes;
     }else {
-      console.log(id);
       this.quiz_data=this.quizzes.filter((q: any) => q.subject.cid == id);
     }
   }

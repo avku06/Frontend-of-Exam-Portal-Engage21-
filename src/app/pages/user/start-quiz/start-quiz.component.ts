@@ -39,7 +39,6 @@ export class StartQuizComponent implements OnInit {
   ngOnInit(): void {
     this.preventBackButton();
     this.qid = this._route.snapshot.params['qid'];
-    console.log(this.qid);
     this.loadQuestions();
   }
   loadQuestions() {
@@ -48,13 +47,10 @@ export class StartQuizComponent implements OnInit {
         this.questions = data;
 
         this.timer = this.questions[0].quiz.maxDuration * 60;
-
-        console.log(this.questions);
         this.startTimer();
       },
 
       (error) => {
-        console.log(error);
         Swal.fire('Error', 'Error in loading questions of quiz', 'error');
       }
     );
@@ -105,7 +101,6 @@ export class StartQuizComponent implements OnInit {
     //call to sever  to check questions
     this._question.evalQuiz(this.questions).subscribe(
       (data: any) => {
-        console.log(data);
         this.marksGot = data.marksGot;
         this.correctAnswers = data.correctAnswers;
         this.attempted = data.attempted;
@@ -133,7 +128,9 @@ export class StartQuizComponent implements OnInit {
         );
       },
       (error) => {
-        console.log(error);
+        this.snack.open('Error in evaluating quiz. Check your internet connection', '', {
+          duration: 3000,
+        });
       }
     );
   }

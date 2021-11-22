@@ -16,7 +16,6 @@ export class AuthInterceptor implements HttpInterceptor {
 
   private handleAuthError(err: HttpErrorResponse): Observable<any> {
     //handle your auth error or rethrow
-    console.log(err);
     if (err.status === 401 || err.status === 403 || err.status===0) {
       //navigate /delete cookies or whatever
       this.loginService.logout();

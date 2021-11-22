@@ -27,19 +27,4 @@ export class SidemenuComponent implements OnInit {
       }
     );
   }
-  // Logout(){
-  //   Swal.fire({
-  //     icon: 'info',
-  //     title: 'Are you sure ?',
-  //     confirmButtonText: 'Logout',
-  //     showCancelButton: true,
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       this.loginService.logout();
-  //       this.router.navigate(['']);
-  //       // window.location.href='/';
-  //       this.loginService.loginStatusSubject.next(true);
-  //     }
-  //   });
-  // }
 }

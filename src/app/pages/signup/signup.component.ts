@@ -29,9 +29,26 @@ export class SignupComponent implements OnInit {
 
 
   SubmitRegisterationForm() {
-    // console.log(this.user);
     if (this.user.username == '' || this.user.username == null || this.user.password == '' || this.user.password == null || this.user.firstName == '' || this.user.firstName == null || this.user.lastName == '' || this.user.lastName == null || this.user.email == '' || this.user.email == null || this.user.phone == '' || this.user.phone == null || this.user.sem == '' || this.user.sem == null || this.user.branch == '' || this.user.branch == null) {
       this._snackBar.open('Fill the required(*) fields !!','',{
+        duration:3000,
+      });
+      return;
+    }
+
+    //phone num check (assuming indian phone numbers start with 6-7-8-9)
+    const phoneno = new RegExp('^(\\+91[\\-\\s]?)?[0]?(91)?[6789]\\d{9}$');
+    if( !phoneno.test(this.user.phone.toString()) ){
+      this._snackBar.open('Enter Correct Phone Number','',{
+        duration:3000,
+      });
+      return;
+    }
+
+    //email check
+    const emailRgx = new RegExp('^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$');
+    if( !emailRgx.test(this.user.email) ){
+      this._snackBar.open('Enter Correct Email Id','',{
         duration:3000,
       });
       return;
@@ -65,4 +82,6 @@ export class SignupComponent implements OnInit {
     this.user.firstName='';
     this.user.password='';
   }
+
+
 }

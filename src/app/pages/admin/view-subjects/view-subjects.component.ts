@@ -17,10 +17,8 @@ export class ViewSubjectsComponent implements OnInit {
     this.subjectService.subjects().subscribe(
       (data: any) => {
         this.subjects = data;
-        console.log(data);
       },
       (error:any) => {
-        console.log(error);
         Swal.fire('Error !!', 'Error in loading data', 'error');
       }
     );

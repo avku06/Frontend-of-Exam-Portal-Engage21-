@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import {SubjectsService} from "../../../services/subjects.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {QuizService} from "../../../services/quiz.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-update-quiz',
@@ -14,7 +15,8 @@ export class UpdateQuizComponent implements OnInit {
     private _route: ActivatedRoute,
     private _quiz: QuizService,
     private _sub: SubjectsService,
-    private _router: Router
+    private _router: Router,
+    private snack:MatSnackBar
   ) {}
 
   qId :any;
@@ -26,20 +28,22 @@ export class UpdateQuizComponent implements OnInit {
     this._quiz.getQuiz(this.qId).subscribe(
       (data: any) => {
         this.quiz = data;
-        // console.log(this.quiz);
       },
       (error:any) => {
-        console.log(error);
+        this.snack.open('Error in loading Quiz Details', '', {
+          duration: 3000,
+        });
       }
     );
 
     this._sub.subjects().subscribe(
       (data: any) => {
         this.subjects = data;
-        console.log(this.subjects);
       },
       (error:any) => {
-        alert('error in loading Subjects');
+        this.snack.open('Error in loading Subjects', '', {
+          duration: 3000,
+        });
       }
     );
   }
@@ -55,7 +59,7 @@ export class UpdateQuizComponent implements OnInit {
       },
       (error:any) => {
         Swal.fire('Error', 'error in updating quiz', 'error');
-        console.log(error);
+
       }
     );
   }

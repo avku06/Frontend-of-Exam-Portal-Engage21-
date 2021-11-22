@@ -28,6 +28,8 @@ Frontend angular application started at `http://localhost:4200/`
   b). spring.datasource.username = `root` <br>
   c). spring.datasource.password = `password` <br>
 
+5. Run the backend application by clicking on Run Application.
+
 Backend Springboot application started at `http://localhost:8080/`
 
 #### Navigate to `http://localhost:4200/`. <br>
@@ -40,4 +42,4 @@ Donot change any frontend file by mistake because the app will automatically rel
 Angular CLI: 13.0.3<br>
 Node: 16.13.0<br>
 Package Manager: npm 8.1.0<br>
-
+java version "1.8.0_301"

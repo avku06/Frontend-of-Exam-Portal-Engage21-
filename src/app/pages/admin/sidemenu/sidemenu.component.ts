@@ -25,7 +25,6 @@ export class SidemenuComponent implements OnInit {
       if (result.isConfirmed) {
         this.loginService.logout();
         this.router.navigate(['']);
-        // window.location.href='/';
         this.loginService.loginStatusSubject.next(true);
       }
     });

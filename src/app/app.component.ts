@@ -15,7 +15,6 @@ export class AppComponent implements OnInit{
     this.router.events.subscribe((event: any) => {
       if(event.url!=undefined && event.url!=null && event.url.includes('/start/')){
         this.cur_route_start=true;
-        console.log("true");
       }
     });
   }

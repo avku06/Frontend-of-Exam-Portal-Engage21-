@@ -33,11 +33,9 @@ export class InstructionsComponent implements OnInit {
 
     this._quiz.getQuiz(this.qid).subscribe(
       (data: any) => {
-        // console.log(data);
         this.quiz = data;
       },
       (error:any) => {
-        console.log(error);
         this._snack.open('Error in loading quiz data from server', '', {
           duration: 3000,
         });
@@ -52,7 +50,9 @@ export class InstructionsComponent implements OnInit {
         }
       },
       (error:any)=>{
-        console.log(error);
+        this._snack.open('Error in loading data', '', {
+          duration: 3000,
+        });
       }
     );
   }

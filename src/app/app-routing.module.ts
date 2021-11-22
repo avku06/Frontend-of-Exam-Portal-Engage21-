@@ -17,7 +17,6 @@ import {ViewQuizComponent} from "./pages/admin/view-quiz/view-quiz.component";
 import {UpdateQuizComponent} from "./pages/admin/update-quiz/update-quiz.component";
 import {ViewQuizQuestionsComponent} from "./pages/admin/view-quiz-questions/view-quiz-questions.component";
 import {AddQuestionComponent} from "./pages/admin/add-question/add-question.component";
-import {UserHomepageComponent} from "./pages/user/user-homepage/user-homepage.component";
 import {QuizComponent} from "./pages/user/quiz/quiz.component";
 import {InstructionsComponent} from "./pages/user/instructions/instructions.component";
 import {StartQuizComponent} from "./pages/user/start-quiz/start-quiz.component";

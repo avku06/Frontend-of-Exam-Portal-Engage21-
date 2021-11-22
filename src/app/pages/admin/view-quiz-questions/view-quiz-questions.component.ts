@@ -25,7 +25,6 @@ export class ViewQuizQuestionsComponent implements OnInit {
     this.qTitle = this._route.snapshot.params['title'];
     this._question.getQuestionsOfQuiz(this.qId).subscribe(
       (data: any) => {
-        console.log(data);
         this.questions = data;
       },
       (error) => {
@@ -52,7 +51,7 @@ export class ViewQuizQuestionsComponent implements OnInit {
 
           (error) => {
             Swal.fire('Error !', 'Error in deleting question !', 'error');
-            console.log(error);
+
           }
         );
       }

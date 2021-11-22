@@ -37,7 +37,6 @@ export class ViewAttemptsComponent implements OnInit {
     this.attemptService.getAttemptsOfQuiz(this.qId).subscribe(
       (data:any)=>{
         this.attempts=data;
-        // console.log(this.attempts);
       },
       (error:any)=>{
         Swal.fire('Error!!', 'Error in loading quiz attempts from server', 'error');

@@ -51,7 +51,7 @@
             </div>
 
             <div class="row mt20">
-              <div class="col-md-6">
+              <div class="col-md-6" *ngIf="q.option3">
                 <input
                   type="radio"
                   [value]="q.option3"
@@ -59,7 +59,7 @@
                   [(ngModel)]="q.givenAnswer"
                 />{{ q.option3 }}
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" *ngIf="q.option4">
                 <input
                   type="radio"
                   [value]="q.option4"

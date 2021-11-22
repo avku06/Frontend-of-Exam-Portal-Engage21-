@@ -37,7 +37,6 @@ export class AddSubjectComponent implements OnInit {
         this.snack.open(error.error.text,'',{
           duration:3000,
         })
-        // Swal.fire('Error !!', 'Server error !!', 'error');
       }
     );
   }
