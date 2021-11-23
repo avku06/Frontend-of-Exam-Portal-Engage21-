@@ -25,7 +25,7 @@ export class LoginGuard implements CanActivate {
       this.router.navigate(['admin-dashboard'])
     }
     else {
-      this.router.navigate(['user-dashboard'])
+      this.router.navigate(['user-dashboard/0'])
     }
     return false;
   }

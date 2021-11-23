@@ -6,7 +6,7 @@
   text-overflow: ellipsis;
 }
 .example-header-image {
-  background-image: url("/assets/exam.png");
+  background-image: url("../../../../assets/exam.png");
   background-size: cover;
 }
 
