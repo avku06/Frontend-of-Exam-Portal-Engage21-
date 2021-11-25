@@ -30,13 +30,17 @@ Frontend angular application started at `http://localhost:4200/`
 
 5. Run the backend application by clicking on Run Application from IDE.
 
+#### Navigate to `http://localhost:4200/`. <br>
+
 ( After running the backend application Admin is automatically created and its details are stored in the users table of your local database )<br>
 
-( For logging in the admin account you can see the details of automatically created admin like username and password in `/src/main/java/com/exam/ExamserverApplication.java ` file of Backend folder)
+( For logging in the admin account you can see the details of automatically created admin like username and password in `/src/main/java/com/exam/ExamserverApplication.java ` file of Backend folder) <br>
+Username : admin123 <br>
+Password : admin <br>
+
+(For logging in as normal user/student you can first register and then sign in with the same details)
 
 Backend Springboot application started at `http://localhost:8080/`
-
-#### Navigate to `http://localhost:4200/`. <br>
 
 ---
 
