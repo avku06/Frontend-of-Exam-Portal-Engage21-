@@ -10,12 +10,24 @@ Github Repository for Online Exam Portal [ Backend Code ](https://github.com/pea
 
 ---
 
+## Requirements with given Versions 
+
+Angular CLI: 13.0.3<br>
+Node: 16.13.0<br>
+Package Manager: npm 8.1.0<br>
+java version "1.8.0_301" <br>
+javac 1.8.0_301 <br>
+MySQL Workbench 8.0 <br>
+MySQL Server 8.0
+
+---
+
 ## Local Setup of Project
 
 1. Create a New Folder and clone both Frontend and Backend Repositories inside that folder.
 
 2. Open cmd, go inside the frontend folder and execute following commands : <br>
-   a). `npm install -g @angular/cli` (node.js should be installed before executing commands) <br>
+   a). `npm install -g @angular/cli` <br>
    b). `npm install --scripts-prepend-node-path=auto` <br>
    c). `ng serve` <br>
 
@@ -45,12 +57,6 @@ Password : admin <br>
 ---
 
 Donot change any frontend file by mistake because the app will automatically reload if you change any of the source files.<br>
-
-
-Angular CLI: 13.0.3<br>
-Node: 16.13.0<br>
-Package Manager: npm 8.1.0<br>
-java version "1.8.0_301"
 
 ---
 
