@@ -50,6 +50,8 @@ Backend Springboot application started at `http://localhost:8080/`
 
 #### Navigate to `http://localhost:4200/`. <br>
 
+#### For better view, open in Google Chrome or Microsoft Edge
+
 ( After running the backend application Admin is automatically created and its details are stored in the users table of your local database )<br>
 
 ( For logging in the admin account you can see the details of automatically created admin like username and password in `/src/main/java/com/exam/ExamserverApplication.java ` file of Backend folder) <br>
@@ -64,7 +66,7 @@ Donot change any frontend file by mistake because the app will automatically rel
 
 ---
 
-## Features of Online Exam Portal
+## Features of Online Exam Portal (Responsive Website)
 
 1. There are two types of Users in this Web application <br>
    a). Admin <br>
