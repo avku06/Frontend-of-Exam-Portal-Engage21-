@@ -49,11 +49,11 @@ So this Online Exam Portal overcomes these problems.
    f). View its Profile
 
 7. Quiz <br>
-   b). **All the students get the random questions from a pool of questions** (eg If there are 10 questions added by admin and the quiz consists of 3questions, then one student can get 1st,2nd,3rd question and other can get 4th,5th,2nd question)<br>
-   c). Quiz starts in a new window with a timer <br>
-   d). **Right click, reload and going back is prevented in the test** <br>
-   e). **Just after the test is submitted, automatic server side evaluation is done and marks are shown to the user as well as added into the database** <br>
-   f). **User/Student can download the result in pdf format**
+   a). **All the students get the random questions from a pool of questions** (eg If there are 10 questions added by admin in quiz and the quiz consists of 3questions, then one student can get 1st,2nd,3rd question and other can get 4th,5th,2nd question)<br>
+   b). Quiz starts in a new window with a timer <br>
+   c). **Right click, reload and going back is prevented in the test** <br>
+   d). **Just after the test is submitted, automatic server side evaluation is done and marks are shown to the user as well as added into the database** <br>
+   e). **User/Student can download the result in pdf format**
 
 #### Future Scope
 1. The project can be expanded by incorporating video and audio recording capabilities.
