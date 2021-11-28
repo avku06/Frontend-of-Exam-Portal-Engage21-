@@ -10,12 +10,12 @@ Github Repository for Online Exam Portal Backend Code[ https://github.com/pearlg
 
 ---
 
-#Online Exam Portal
+# Online Exam Portal
 
 The COVID era has been challenging for most of the organizations and industries running across the world.
 Educational institutions no exceptions. Earlier the student evaluation was very easy with the offline mode of exams.
-But due to pandemic, either the exams are not conducted in colleges or schools, or there are lot of unfair practices 
-involved in exams due to which student evaluation is not proper. 
+But due to pandemic, either the exams are not conducted in colleges or schools, or there are lot of unfair practices
+involved in exams due to which student evaluation is not proper.
 So this Online Exam Portal overcomes these problems.
 
 ## Features of Online Exam Portal (Responsive Website)
